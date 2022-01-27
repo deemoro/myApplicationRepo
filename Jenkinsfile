@@ -4,21 +4,21 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building'
-        sh 'jenkins/build.sh'
+        sh 'MyWebApp/src/main/webapp/build.sh'
       }
     }
 
     stage('test') {
       steps {
         echo 'Testing'
-        sh 'jenkins/test-all.sh'
+        sh 'MyWebApp/src/main/webapp/test-all.sh'
       }
     }
 
     stage('Deploy') {
       steps {
         echo 'Deploying'
-        sh 'jenkins/deploy.sh'
+        sh 'MyWebApp/src/main/webapp/deploy.sh'
       }
     }
 
